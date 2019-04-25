@@ -82,6 +82,12 @@ nav {
   position: relative;
 }
 
+#lista-produtos {
+    width: 100%;
+    height: 345px;
+    overflow-y: auto;
+}
+
 #finalizar-compra {
   width: 100%;
   height: 57px;
