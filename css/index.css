@@ -75,7 +75,7 @@ nav {
   height: 459px;
   margin-left: auto;
   margin-right: 30px;
-  display: block;
+  display: none;
   opacity: 0.9;
   box-shadow: -1.7px 1px 5px 0.1px rgba(0, 0, 0, 0.14);
   background-color: #eeeeee;
