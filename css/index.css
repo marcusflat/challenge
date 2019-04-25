@@ -12,6 +12,9 @@ nav {
   width: 100%;
   height: 75px;
   box-shadow: 0 0 12.4px 0.7px rgba(0, 0, 0, 0.13);
+  overflow: auto;
+  position: relative;
+  z-index: 0;
 }
 
 .container {
@@ -72,6 +75,19 @@ nav {
   filter: invert(70%);
 }
 
+#arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #eeeeee;
+  top: 80.5%;
+  left: 93%;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
 #mini-cart {
   width: 292px;
   height: 459px;
@@ -88,6 +104,14 @@ nav {
     width: 100%;
     height: 345px;
     overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #707070;
 }
 
 .produto {
@@ -209,3 +233,5 @@ nav {
   font-size: 16.5px;
   color: #ffffff;
 }
+
+
