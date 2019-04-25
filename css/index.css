@@ -66,6 +66,18 @@ nav {
     margin-right: 57px;
 }
 
+#shopping-cart:hover {
+    filter: invert(70%);
+}
+
+#mini-cart {
+    width: 292px;
+    height: 459px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: 30px;
+    display: block;
+}
 
 
 
