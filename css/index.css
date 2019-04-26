@@ -108,10 +108,16 @@ nav {
 
 ::-webkit-scrollbar {
   width: 10px;
+  background-color: #dcdcdc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #707070;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #707070;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #dcdcdc;
 }
 
 .produto {
