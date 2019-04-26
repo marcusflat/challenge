@@ -3,6 +3,7 @@ const cart = document.querySelector("#shopping-cart");
 cart.addEventListener("click", async () => {
   toggleMiniCart();
   const arrayOfProducts = await fetchProducts();
+  clearMiniCart();
   createProductDiv(arrayOfProducts);
 });
 
@@ -24,6 +25,19 @@ async function fetchProducts() {
   const request = await fetch("http://localhost:3000/products");
   const json = await request.json();
   return json.cart.item;
+}
+
+function clearMiniCart() {
+  const arrayOfProductsElements = document.querySelectorAll(".produto");
+  const arrayOfHrElements = document.querySelectorAll("hr");
+  if (arrayOfProductsElements && arrayOfHrElements) {
+    for (const element of arrayOfProductsElements) {
+      element.parentNode.removeChild(element);
+    }
+    for (const element of arrayOfHrElements) {
+      element.parentNode.removeChild(element);
+    }
+  }
 }
 
 function createProductDiv(arrayOfProducts) {
