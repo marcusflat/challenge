@@ -5,6 +5,7 @@ cart.addEventListener("click", async () => {
   const arrayOfProducts = await fetchProducts();
   clearMiniCart();
   createProductDiv(arrayOfProducts);
+  totalPrice()
 });
 
 function toggleMiniCart() {
@@ -49,10 +50,6 @@ function createProductDiv(arrayOfProducts) {
     divProduct.setAttribute("class", "produto");
     listaProdutos.appendChild(divProduct);
 
-    // create <hr>
-    const hr = document.createElement("hr");
-    listaProdutos.appendChild(hr);
-
     // create <div class="img"></div>
     const divImg = document.createElement("div");
     divImg.setAttribute("class", "img");
@@ -91,7 +88,27 @@ function createProductDiv(arrayOfProducts) {
 
     // create <p></p> and insert product price
     const pValorProduto = document.createElement('p');
+    pValorProduto.setAttribute('product-price',`${obj.bestPrice}`)
     pValorProduto.innerHTML = obj.bestPriceFormated;
     divValorProduto.appendChild(pValorProduto);
+
+    // create <hr>
+    const hr = document.createElement("hr");
+    listaProdutos.appendChild(hr);
   });
+}
+
+function totalPrice() {
+  const arrayOfProductsElements = document.querySelectorAll('[product-price]')
+  let total = 0;
+  if(arrayOfProductsElements) {
+    for (const element of arrayOfProductsElements) {
+      const priceString = element.getAttribute('product-price');
+      const stringWithDot = priceString.substring(0, priceString.length - 2) + '.' + priceString.substring(priceString.length - 2, priceString.length);
+      const stringToNumber = parseFloat(stringWithDot);
+      total += stringToNumber;
+    }
+  }
+  const pValorTotal = document.getElementById('valor-total');
+  pValorTotal.innerHTML = 'R$ ' + total.toLocaleString('pt-br');
 }
