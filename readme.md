@@ -36,3 +36,38 @@ Então mãos a obra e bom challenge ;)
 - Boa descrição das funcionalidades do desafio
 - Fidelidade ao design proposto
 - Adaptação mobile
+
+##Instruções de Uso
+
+**Node.js**
+- É necessário ter instalado Node.js a partir da versão 8+
+- Para iniciar o servidor execute o comando na pasta raiz:
+`node server/app.js`
+- Para parar o servidor execute o comando no terminal:
+`Ctrl + C`
+
+**Uso com Docker**
+- É necessário ter instalado Docker a partir da versão 18+ e docker-compose 1.23+
+- Para iniciar o servidor execute o comando na pasta raiz:
+`docker-compose up -d --build`
+- Para parar o servidor execute o comando na pasta raiz:
+`docker-compose down`
+
+Com o servidor rodando já estamos prontos para testar nossa app, abra o arquivo `index.html` no seu navegador.
+
+**Tecnologias Utilizadas**
+- Para facilitar a montagem do ambiente foi utilizado Docker.
+- Foi criado um servidor http Node.js utilizando o framework Express.
+- HTML e CSS.
+- Javascript sem nenhuma biblioteca.
+
+**Funcionalidades**
+- Mini-cart dropdown
+- Consumo do JSON via fetch
+- Manipulação do mini-cart com os dados do JSON
+- Antes de cada request, limpa os items do mini-cart
+- Calcula o valor total dos produtos do mini-cart
+
+
+
+
