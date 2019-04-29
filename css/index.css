@@ -95,6 +95,10 @@ nav {
   display: none;
 }
 
+#drop-down {
+  display: none;
+}
+
 #mini-cart {
   width: 292px;
   height: 459px;
@@ -307,6 +311,18 @@ nav {
 
   #arrow-up {
     opacity: 0;
+  }
+
+  .drop-down {
+    width: 100vw;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+
+  .visible {
+    display: block;
   }
 
 }
