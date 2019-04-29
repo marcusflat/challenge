@@ -61,7 +61,7 @@ function createProductDiv(arrayOfProducts) {
     img.setAttribute("src", `${obj.image.slice(1)}`);
     divImg.appendChild(img);
 
-    // create <div class="produto"></div>
+    // create <div class="nome-produto"></div>
     const divNomeProduto = document.createElement('div');
     divNomeProduto.setAttribute('class','nome-produto');
     divProduct.appendChild(divNomeProduto);

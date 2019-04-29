@@ -55,6 +55,10 @@ nav {
   margin-right: 63px;
 }
 
+#shopping-cart {
+  position: relative;
+}
+
 #busca > img,
 #usuario > img,
 #shopping-cart > img {
@@ -71,7 +75,7 @@ nav {
   margin-right: 57px;
 }
 
-#shopping-cart:hover {
+#shopping-cart > img:hover {
   filter: invert(70%);
 }
 
@@ -81,8 +85,7 @@ nav {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 15px solid #eeeeee;
-  top: 80.5%;
-  left: 93%;
+  bottom: 0;
   position: absolute;
   z-index: 1;
   display: none;
